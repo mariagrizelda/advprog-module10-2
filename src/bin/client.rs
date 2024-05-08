@@ -21,7 +21,7 @@ ClientBuilder::from_uri(Uri::from_static("ws://127.0.0.1:8080"))
                 match incoming {
                     Some(Ok(msg)) => {
                         if let Some(text) = msg.as_text() {
-                            println!("From server: {}", text);
+                            println!("Helga's Computer - From server: {}", text);
                         }
                     },
                     Some(Err(err)) => return Err(err.into()),

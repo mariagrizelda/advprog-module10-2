@@ -59,7 +59,7 @@ async fn handle_connection(
 
                             println!("From client {addr:?} {text:?}");
 
-                            bcast_tx.send(text.into())?;
+                            bcast_tx.send(format!("{addr} : {text}"))?;
 
                         }
 
